@@ -20,18 +20,6 @@ used for both the **Obtain 2D Embeddings** (further data reduction) and **CLUSTE
 
     * After a method is chosen from the dropdown menu, the user can expand a tab with the settings and documentation of the method by clicking the button on the right.
 
-    * Most methods require you to manually set the number of components
-    (default: 40). For a select few (namely, PCA and its variants), we provide
-    an <span class='keyword'>Automatic</span> option which will
-    determine the best number of components
-    for you. This runs the chosen method with a large number of components (200)
-    and uses the [Kneedle algorithm](https://ieeexplore.ieee.org/document/5961514)
-    to detect the "knee" in the graph of the explained variance.
-    <span class="good">GP<span class="tooltip">Good Practice</span></span>
-    We recommend running PCA in <span class='keyword'>Automatic</span>
-    mode once, take note of the computed number of components, and then
-    manually set this value on the next run to save computational time.
-
     [//]:# "* [cisTopic](https://www.nature.com/articles/s41592-019-0367-1) is a"
     [//]:# "probabilistic framework that uses Latent Dirichlet Allocation to model"
     [//]:# "cis-regulatory topics. We use cisTopic to mainly analyze scATAC-seq data."
@@ -41,8 +29,7 @@ used for both the **Obtain 2D Embeddings** (further data reduction) and **CLUSTE
     [//]:# "$$\small\times$$ cisTopic matrix."
 
     * <span class="pn">PN<span class="tooltip">Note to Programmers</span></span>
-    This step populates the
-    `adata.obsm['x_emb']` and `adata.uns['dim_reduction_info']` keys.
+    This step populates the `adata.obsm['x_emb']` key.
 
 * **Obtain 2D Embeddings**
     * This list of algorithms is used to further reduce the embeddings
@@ -53,8 +40,7 @@ used for both the **Obtain 2D Embeddings** (further data reduction) and **CLUSTE
     * Again the button on the right of the dropdown manu allows the user to configure detailed setting of the method.
 
     * <span class="pn">PN<span class="tooltip">Note to Programmers</span></span>
-    This step populates the
-    `adata.obsm['x_emb_2d']` and `adata.uns['visualization_info_2d']` keys.
+    This step populates the `adata.obsm['x_emb_2d']` key.
 
 * **<span class='mbutton'>RUN</span>**
     * Pressing this button will reduce the data and generate a scatter plot.
