@@ -27,15 +27,18 @@ can be used to get a better understanding of the data.
     cells. Otherwise, Cellar finds DE genes of Subset 1 vs Subset 2.
     After specifying the subsets, click <span class="mbox">FIND DE GENES</span>.
     A table will be generated for showing the DE genes and relevant information.
+    A gene is deteremined to be differentially expressed via a t-test and all
+    DE genes are sorted by log fold-change. We do not consider genes to be DE
+    if their fold-change value is less than 1, no matter the p-value threshold.
 <br>
 ![DE](images/ui-analysis-de.png)
 <br>
 
 * **Feature Visualization**
     * Three types of feature visualization are implemented: **PLOT EXPRESSION**,
-    **HEATMAP**, and **VIOLIN PLOT**. To perform the visualization, first select 
-    genes you wish to visualize in the first dropdown menu, then select the range to visualize, finally select the visualization 
-    method in the second dropdown menu **PLOTTING**. 
+    **HEATMAP**, and **VIOLIN PLOT**. To perform the visualization, first select
+    genes you wish to visualize in the first dropdown menu, then select the range to visualize, finally select the visualization
+    method in the second dropdown menu **PLOTTING**.
 
     * When multiple genes are selected for plotting the expression value, the color will be used for showing the co-expression value. If we let the expression matrix be
     $$M\in\mathbb{R}^{m\small\times n}$$, then given a cell
@@ -69,7 +72,7 @@ can be used to get a better understanding of the data.
 
 * **Enrichment Anlysis**
     * After DE analysis, this can be used for performing different enrichment analysis via a hypergeometric test. To do this analysis, simply choose a marker
-    list in the first dropdown menu, enter the number of DE genes to use for the analysis, and click <span class="mbox">RUN</span>. Then a table will be generated for showing the results. 
+    list in the first dropdown menu, enter the number of DE genes to use for the analysis, and click <span class="mbox">RUN</span>. Then a table will be generated for showing the results.
     The entries are sorted by p-value.
     An <span class="mbox">EXPORT</span> button above the table
     will download the dataframe as a <span class="extension">csv</span> file.<br>
