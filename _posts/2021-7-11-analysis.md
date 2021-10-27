@@ -28,8 +28,9 @@ can be used to get a better understanding of the data.
     After specifying the subsets, click <span class="mbox">FIND DE GENES</span>.
     A table will be generated for showing the DE genes and relevant information.
     A gene is deteremined to be differentially expressed via a t-test and all
-    DE genes are sorted by log fold-change. We do not consider genes to be DE
-    if their fold-change value is less than 1, no matter the p-value threshold.
+    DE genes are sorted by log fold-change. Users can specify the corrected
+    p-value threshold or the fold-change threshold to filter on. If FC is set
+    to 0, then no fold-change filtering is applied.
 <br>
 ![DE](images/ui-analysis-de.png)
 <br>
