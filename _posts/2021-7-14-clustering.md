@@ -79,8 +79,9 @@ This menu consists of three tabs for obtaining labels: **UNSUPERVISED**, **SEMI-
 <br>
 
   * Label transfer should be used under the dual mode. It can be used to transfer
-    the labels from a deactivated reference dataset
-    to the current activated one. Currently Cellar supports label transfer with
+    the labels from a labeled reference dataset
+    to the active dataset (a dataset can be activated by clicking "Activate" at that Plot's header).
+    Currently Cellar supports label transfer with
     [Scanpy Ingest](https://scanpy-tutorials.readthedocs.io/en/latest/integrating-data-using-ingest.html)
     and [SingleR](https://bioconductor.org/packages/devel/bioc/vignettes/SingleR/inst/doc/SingleR.html).
     <span class="warn">!!<span class="tooltip">Attention</span></span>
@@ -88,6 +89,11 @@ This menu consists of three tabs for obtaining labels: **UNSUPERVISED**, **SEMI-
     the genes which are common in both the active and the reference dataset.
     If you get bad results, make sure the two datasets use the same format
     for the gene names. Label transfer typically takes a few minutes to finish.
+
+  * "Cell ID Based" label transfer is used to transfer labels from one dataset
+    to the other by matching cell barcodes among the two. This can be useful
+    for example in SNARE-seq datasets where both the expression levels and chromatin
+    accessibility are profiled for the same cells.
 
   * <span class="pn">PN<span class="tooltip">Note to Programmers</span></span>
     Updates the `adata.obs['labels']` key.
