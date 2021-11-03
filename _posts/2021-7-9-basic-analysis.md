@@ -1,11 +1,11 @@
 ---
-title: 'Tutorial: Basic Gene Expression Analysis Pipeline'
+title: 'TUTORIAL: Basic Gene Expression Analysis Pipeline'
 
 category: Tutorials
 layout: null
-type: null
+type: tutorial
 ---
-This is a step-by-step tutorial for the basic single cell gene expression data analysis using Cellar, a [video demo](https://www.youtube.com/watch?v=J61itSMezFI) is also available on YouTube. THe functions included in this tutorial work for all types of datasets. In this tutorial, we walk through the pipeline using default settings. However, feel free to check out detailed information about other available options of each step in the corresponding sections, so that you can experiment with different settings and see which one works the best for you. 
+This is a step-by-step tutorial for the basic single cell gene expression data analysis using Cellar, a [video demo](https://www.youtube.com/watch?v=J61itSMezFI) is also available on YouTube. THe functions included in this tutorial work for all types of datasets. In this tutorial, we walk through the pipeline using default settings. However, feel free to check out detailed information about other available options of each step in the corresponding sections, so that you can experiment with different settings and see which one works the best for you.
 
 **1. Load Dataset**
 <br>
@@ -14,7 +14,7 @@ This is a step-by-step tutorial for the basic single cell gene expression data a
 <br>
 ![Basic Load Dataset](images/basic-load-dataset.png)
 <br>
-    After loading the dataset, information stored in the dataset (e.g. 2D plot, celltype annotations, etc.) will be visualized. However, this dataset only has the original expression matrix. So only the number of cells and number of genes are shown. 
+    After loading the dataset, information stored in the dataset (e.g. 2D plot, celltype annotations, etc.) will be visualized. However, this dataset only has the original expression matrix. So only the number of cells and number of genes are shown.
 
 <br>
 ![Basic Cells Genes](images/basic-cells-genes.png)
@@ -30,7 +30,7 @@ This is a step-by-step tutorial for the basic single cell gene expression data a
 
 **3. Dimensionality Reduction**
 <br>
-    Go to the **DIMENSIONALITY REDUCTION** panel in the sidebar and run dimensionality reduction by: selecting embedding method (e.g. PCA) -> selecting 2D embedding method (e.g. UMAP, TSNE) -> click the <span class='mbutton'>RUN</span> button. You can also configure the parameters by clicking the setting buttons on the right of the dropdown menus. Here, "embedding" is a low dimensional (default 40) embedding used for subsequent analysis (e.g. clustering and DE analysis), and 2D embedding is for the visalization in the main plot. After this step, a scatter plot (2D embedding) will be shown in the main plot where each point is a cell. 
+    Go to the **DIMENSIONALITY REDUCTION** panel in the sidebar and run dimensionality reduction by: selecting embedding method (e.g. PCA) -> selecting 2D embedding method (e.g. UMAP, TSNE) -> click the <span class='mbutton'>RUN</span> button. You can also configure the parameters by clicking the setting buttons on the right of the dropdown menus. Here, "embedding" is a low dimensional (default 40) embedding used for subsequent analysis (e.g. clustering and DE analysis), and 2D embedding is for the visalization in the main plot. After this step, a scatter plot (2D embedding) will be shown in the main plot where each point is a cell.
 
 <br>
 ![Dim Settings](images/dim-settings.png)
@@ -74,7 +74,7 @@ You can also download the plot at any time by clicking the button at the top-rig
 
 **6. Differentially Expressed Genes Analysis**
 <br>
-To do DE analysis, scroll down a bit and go to the **DE Analysis** panel in the **ANALYSIS** tab under the main plot. Select two subsets that you want to find DE genes for. These subsets include the subsets the you defined in previous steps, and all the clusters. Then, after clicking <span class='mbutton'>FIND DE GENES</span>, a table will show the DE genes with p-values below <span class='mbutton'>alpha</span>,which is also adjustable. For example, here we find the DE genes of the new subset that we just defined against all the rest cells. 
+To do DE analysis, scroll down a bit and go to the **DE Analysis** panel in the **ANALYSIS** tab under the main plot. Select two subsets that you want to find DE genes for. These subsets include the subsets the you defined in previous steps, and all the clusters. Then, after clicking <span class='mbutton'>FIND DE GENES</span>, a table will show the DE genes with p-values below <span class='mbutton'>alpha</span>,which is also adjustable. For example, here we find the DE genes of the new subset that we just defined against all the rest cells.
 
 <br>
 ![DE](images/basic-de.png)
@@ -82,13 +82,13 @@ To do DE analysis, scroll down a bit and go to the **DE Analysis** panel in the 
 
 **7. Feature Visualizations**
 <br>
-You can also visualize one or more genes in the **Feature Visualization** panel, which is on the right of the **DE Analysis** panel. For example, if we are interested in the first DE gene "CD74", we select this gene by either typing or finding it in the first dropdown. Then we select the range to visualize (optional). Finally, we select the type of visualization in the second dropdown, which has 3 options `PLOT EXPRESSION`, `HEATMAP`, and `VIOLIN PLOT`. For example let's first take a look at the violin plot. 
+You can also visualize one or more genes in the **Feature Visualization** panel, which is on the right of the **DE Analysis** panel. For example, if we are interested in the first DE gene "CD74", we select this gene by either typing or finding it in the first dropdown. Then we select the range to visualize (optional). Finally, we select the type of visualization in the second dropdown, which has 3 options `PLOT EXPRESSION`, `HEATMAP`, and `VIOLIN PLOT`. For example let's first take a look at the violin plot.
 <br>
 
 ![violin](images/basic-violin.png)
 <br>
 
-We can see this DE gene is indeed expressed higher in the new cluster that we just defined (Cluster 9). 
+We can see this DE gene is indeed expressed higher in the new cluster that we just defined (Cluster 9).
 <br>
 
 If we select `PLOT EXPRESSION`, then the color of the main plot will be changed to indicate expression value. Brighter means higher expression and vice versa. If there are gray cells, then it means their expression value are out of the range that we selected. If multiple genes are selected, then the co-expression value will be visualized. See the **ANALYSIS** section for more details. In our case we plot the first DE gene and we can see it is indeed expressed higher in the new subset.
@@ -112,7 +112,7 @@ In the **Enrichment Analysis** panel at the bottom, we provide several marker li
 
 **9. Export Session**
 <br>
-When you are done with the analysis, you can export your results by using the **SESSION** panel in the side bar. **EXPORT SESSION** will download the dataset with all the results as an  <span class='extension'>h5ad</span> file. **EXPORT ANNOTATIONS ONLY** will download the cell annotations as a  <span class='extension'>csv</span> file. 
+When you are done with the analysis, you can export your results by using the **SESSION** panel in the side bar. **EXPORT SESSION** will download the dataset with all the results as an  <span class='extension'>h5ad</span> file. **EXPORT ANNOTATIONS ONLY** will download the cell annotations as a  <span class='extension'>csv</span> file.
 <br>
 ![session](images/session.png)
 <br>
