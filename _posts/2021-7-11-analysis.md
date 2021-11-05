@@ -30,7 +30,9 @@ can be used to get a better understanding of the data.
     A gene is deteremined to be differentially expressed via a t-test and all
     DE genes are sorted by log fold-change. Users can specify the corrected
     p-value threshold or the fold-change threshold to filter on. If FC is set
-    to 0, then no fold-change filtering is applied.
+    to 0, then no fold-change filtering is applied. If you data has been
+    log-transformed during the preprocessing step, make sure "Is Data Logged"
+    has been set to True, and False otherwise.
 <br>
 ![DE](images/ui-analysis-de.png)
 <br>
@@ -72,7 +74,7 @@ can be used to get a better understanding of the data.
     <br>
 
 * **Enrichment Anlysis**
-    * After DE analysis, this can be used for performing different enrichment analysis via a hypergeometric test. To do this analysis, simply choose a marker
+    * After DE analysis, this can be used for performing different enrichment analysis using the GSEAPY Python package. To do this analysis, simply choose a marker
     list in the first dropdown menu, enter the number of DE genes to use for the analysis, and click <span class="mbox">RUN</span>. Then a table will be generated for showing the results.
     The entries are sorted by p-value.
     An <span class="mbox">EXPORT</span> button above the table

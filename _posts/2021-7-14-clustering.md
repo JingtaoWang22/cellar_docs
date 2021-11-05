@@ -43,7 +43,7 @@ This menu consists of three tabs for obtaining labels: **UNSUPERVISED**, **SEMI-
         betweeen parentheses ( ) and square brackets [ ]) E.g., $$[4, 8, 16]$$ will
         spawn three instances of the algorithm. Finally, you could use a single
         integer value.
-      * There is another special algorithm called Uncertainty clustering. You can only run it after cells are labeled by other algorithms. Uncertainty clustering generates a new cluster (cluster ID -1) with cells having high uncertainty score. The uncertainty score is computed according to cells' distance to the cluster centers in the dimensionality reduced space. After this, re-clustering the new generated uncertain cluster using Constrained Leiden could often improve the clustering results (getting closer to the ground truth) if the original labels are obtained using algorithms based on local neighbors (e.g. Leiden). Intuitively, the improvements come from incorporating the information about the cluster centers, which is not considered in Leiden.
+      * Uncertainty clustering can only be run after cells have been labeled by any of other algorithms. Uncertainty clustering generates a new cluster (cluster ID -1) for cells having a high uncertainty score. The uncertainty score is computed according to the cells' distance to the cluster centers in the reduced space. After this, re-clustering the newly generated uncertain cluster using Constrained Leiden could often improve the clustering results. Intuitively, the improvements come from incorporating information about the cluster centers into the algorithm, which is not considered in Leiden.
 
 
       [//]:# "* An [Ensemble](https://github.com/GGiecold/Cluster_Ensembles) algorithm"
@@ -65,9 +65,8 @@ This menu consists of three tabs for obtaining labels: **UNSUPERVISED**, **SEMI-
     This can be useful when the user intervenes in the data by manually
     splitting/merging clusters or after running label transfer (see below).
 
-    * This includes an algorithms [Constrained Leiden] for refining clustering results.
-        * Constrained Leiden allows the user to "preserve"
-        a user-defined set of clusters. These clusters will be left as is, while
+    * Constrained Leiden allows the user to "preserve"
+        a set of clusters. These clusters will be left as is, while
         the remaining clusters will be subject to change. To do this, click the setting button on the right of the dropdown menu and select clusters to preserve using the checkboxes for each cluster in the setting menu.
 
     * <span class="pn">PN<span class="tooltip">Note to Programmers</span></span>
@@ -78,14 +77,14 @@ This menu consists of three tabs for obtaining labels: **UNSUPERVISED**, **SEMI-
 ![ Label Transfer](images/label-transfer.png)
 <br>
 
-  * Label transfer should be used under the dual mode. It can be used to transfer
+  * Label transfer should be used under dual mode. It can be used to transfer
     the labels from a labeled reference dataset
     to the active dataset (a dataset can be activated by clicking "Activate" at that Plot's header).
     Currently Cellar supports label transfer with
     [Scanpy Ingest](https://scanpy-tutorials.readthedocs.io/en/latest/integrating-data-using-ingest.html)
     and [SingleR](https://bioconductor.org/packages/devel/bioc/vignettes/SingleR/inst/doc/SingleR.html).
     <span class="warn">!!<span class="tooltip">Attention</span></span>
-    When running Scanpy Ingest, we use only
+    When running label transfer, we use only
     the genes which are common in both the active and the reference dataset.
     If you get bad results, make sure the two datasets use the same format
     for the gene names. Label transfer typically takes a few minutes to finish.

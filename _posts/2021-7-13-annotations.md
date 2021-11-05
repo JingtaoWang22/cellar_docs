@@ -1,11 +1,11 @@
 ---
-title: 'ANNOTATIONS'
+title: 'ANNOTATIONS & TOOLS'
 
 category: User Interface
 layout: null
 type: ui
 ---
-This menu is where you can add new subsets of cells or annotate existing ones.
+In these two menuds, you can add new subsets of cells or annotate existing ones.
 <br>
 ![Annotations](images/annotations.png)
 <br>

@@ -48,7 +48,3 @@ used for both the **Obtain 2D Embeddings** (further data reduction) and **CLUSTE
     complexity of the chosen algorithm. Once data reduction is done, you
     should see a scatter plot of your data. Initially all cells belong to
     a single cluster (cluster 0).
-    <span class="warn">!!<span class="tooltip">Attention</span></span>
-    You might experience a short delay after processing has finished due to
-    the time it takes for the plot to render.
-
