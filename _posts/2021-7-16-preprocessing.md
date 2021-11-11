@@ -5,11 +5,12 @@ category: User Interface
 layout: null
 type: ui
 ---
-The preprocessing panel has two tabs, the first tab includes preprocessing tools that can be applied to any data type, and the other contains a special scATAC-seq preprocessing pipeline.<br>
-**Note**: To save the user some time, all Server Datasets have
+The preprocessing panel has two tabs; the first tab includes preprocessing
+tools that can be applied to any data type, and the other contains a
+special scATAC-seq preprocessing pipeline.<br>
+**Note**: All Server Datasets have
 been preprocessed with the default options. Therefore, there is no need to
-run preprocessing again and you can directly run dimensionality
-reduction/clustering analysis.
+run preprocessing for these datasets and doing so might result in an error.
 
 
 * **PREPROCESSING**
@@ -19,10 +20,10 @@ reduction/clustering analysis.
     tools implemented in the [scanpy](https://scanpy.readthedocs.io/en/stable/)
     Python package. Our choice of preprocessing options is guided by this
     [tutorial](https://scanpy-tutorials.readthedocs.io/en/latest/pbmc3k.html).
-    For a full description of the implemented preprocessing options see
-    [here](https://scanpy.readthedocs.io/en/stable/api/index.html#basic-preprocessing).
+    For a full description of the implemented preprocessing options consult the
+    [API](https://scanpy.readthedocs.io/en/stable/api.html#module-scanpy.pp).
 
-    * The checkboxes can be used for selecting the filters to be applied to the dataset.
+    * Only the filters with checked boxes will be applied.
 
     <br>
     ![Preprocessing1](images/preprocessing1.png)
@@ -76,7 +77,7 @@ reduction/clustering analysis.
     preprocessing and filtering just like in the Preprocess tab.
 
     <br>
-    ![Preprocessing2](images/preprocessing2.png)
+    <img src="images/preprocessing2.png" class="w400"/>
     <br>
 
 * <span class="warn">!!<span class="tooltip">Attention</span></span>
@@ -84,7 +85,6 @@ reduction/clustering analysis.
     will replace the raw data matrix with the preprocessed one.
     If you wish to run preprocessing with different options, you need
     to reload the dataset from the Dataset menu.
-    <span class="pn">PN<span class="tooltip">Note to Programmers</span></span>
     In case you export the session as an <span class="extension">h5ad</span>
     file from the Import/Export menu, you can still find the raw data under
-    `adata.raw` where `adata` is the AnnData object.
+    `adata.raw`.

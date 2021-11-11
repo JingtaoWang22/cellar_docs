@@ -5,23 +5,34 @@ category: User Interface
 layout: null
 type: ui
 ---
-This button allows the user to switch between dual/single mode. In dual mode, two datasets can be visualized simultaneously for side-by-side comparison.
+Dual mode is useful for analyzing and visualizing two datasets simultaneously.
+This can be particularly useful when analyzing SNARE-seq chromatin and
+mRNA expression data, or when integrating two datasets (e.g., via
+label transfer). Tutorials on joint analysis and data integration can be
+found below.
 <br>
 ![CODEX Main Plot](images/dual1.png)
 <br>
 
 * **<span class='mbutton'>DUAL MODE</span>**
-    * This will split the main plot into two parts, each for one dataset. The user can use the <span class='mbutton'>ACTIVATE</span> buttons to activate one of the datasets and deactivate the other one. All of the functions like dimensionality reduction, clustering, and differentially expressed gene analysis will only be applied to the activated plot. Panels containing the information about the dataset (e.g. DE analysis results) will only show information for the activated dataset. The deactivated plot is merely a stationary visualization but all the analysis results are stored and will be recovered once it is activated again.
+    * When in dual mode, only one dataset (plot) is active. This means that
+    all of Cellar's functionality applies to that dataset only. This includes
+    clustering, annotation, and analysis panels. A plot can be activated
+    by clicking the <span class='mbutton'>ACTIVATE</span> button at that plot's
+    toolbar. Also, any label transfer functions assume the inactive dataset
+    to be "reference" data, while the active dataset to be the one we wish
+    to obtain labels for.
 
-* **<span class='mbutton'>SINGLE MODE</span>**
-    * This will expand the activated plot and get back to single mode. But the session for the other dataset will not be lost. It can be recovered by entering mode again.
+* **<span class='mbutton'>SINGLE VIEW</span>**
+    * This switches back to single mode. The session for the other dataset
+    will not be lost and can be recovered by entering dual mode again.
 
-Dual Mode:
-<br>
-![CODEX Main Plot](images/dual2.png)
-<br>
+    Dual Mode:
+    <br>
+    <img src="images/dual2.png" class="w600"/>
+    <br>
 
-Single Mode:
-<br>
-![CODEX Main Plot](images/single.png)
-<br>
+    Single View:
+    <br>
+    <img src="images/single.png" class="w600"/>
+    <br>
