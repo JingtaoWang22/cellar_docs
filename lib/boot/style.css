@@ -238,3 +238,55 @@ code {
   padding: 15px;
   white-space: pre;
 }
+
+#content .tutorial>a {
+  background: #1F5479;
+}
+
+#content .tutorial>a>h2>code>b {
+  background-color: #1F7499;
+}
+
+#content .tutorial>a:hover {
+  background: #1F4469;
+}
+
+#content .limitations>a {
+  background: #9A0000;
+}
+
+#content .limitations>a>h2>code>b {
+  background-color: #AA5555;
+}
+
+#content .limitations>a:hover {
+  background: #7A0000;
+}
+
+#content .installation>a {
+  background: #007A00;
+}
+
+#content .installation>a>h2>code>b {
+  background-color: #55AA55;
+}
+
+#content .installation>a:hover {
+  background: #005A00;
+}
+
+.w300 {
+    width: 300px;
+}
+
+.w400 {
+    width: 400px;
+}
+
+.w500 {
+    width: 500px;
+}
+
+.w600 {
+    width: 600px;
+}
