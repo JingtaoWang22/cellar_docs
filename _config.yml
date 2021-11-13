@@ -1,8 +1,30 @@
----
-baseurl: "/cellar"
-url: "https://JingtaoWang22.github.io"
-exclude: ['README.markdown']
-permalink: ':title'
-highlighter: pygments
-safe: false
-title: 'Cellar Docs'
+title: "Cellar Docs"
+description: An interactive tool for analyzing single-cell omics data
+baseurl: "/cellar_docs" # the subpath of your site, e.g. /blog
+url: "https://jingtaowang22.github.io"
+
+remote_theme: pmarsceill/just-the-docs
+search_enabled: true
+
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+markdown: kramdown
+kramdown:
+  math_engine: katex
+
+footer_content: "Copyright &copy; 2020-2021 Systems Biology Group, Carnegie Mellon University."
+
+aux_links:
+  "Cellar on GitHub":
+    - "//github.com/ferrocactus/CellarV"
+
+aux_links_new_tab: false
+
+ga_tracking: UA-158371100-2
