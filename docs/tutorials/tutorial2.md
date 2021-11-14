@@ -12,8 +12,8 @@ usemathjax: true
 This tutorial describes how to visualize the spatial tile for any CODEX dataset
 available in Cellar. A related video tutorial can be accessed
 [here](https://www.youtube.com/watch?v=zG3j3DdqLUQ).
-{: .fs-6 .fw-300 }
-
+The same pipeline also works for 10x Genomics spatial transcriptomics data. More details can be found in the "Spatial Tile" section.
+{: .fs-6 .fw-300 } 
 ---
 
 We will be analyzing a lymph node dataset, courtesy of the University of Florida and
