@@ -14,7 +14,8 @@ Currently, Cellar also supports cluster and protein co-localization scores
 which are computed via the
 [adjacency score](https://github.com/CamaraLab/AdjacencyScore).
 These scores are shown as heatmaps and describe how well two clusters
-or proteins are co-localized in the spatial tile. However, we are not able to do gene co-localization for 10X spatial data due to its very long runtime (O(#gene <sup>2</sup> )).  
+or proteins are co-localized in the spatial tile.
+Gene co-localization for Visium 10X spatial data is not currently supported.
 
 We first construct a neighbors graph by using the spatial coordinates
 of each cell, and then feed this graph to the STvEA package to compute
